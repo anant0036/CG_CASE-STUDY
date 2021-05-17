@@ -1,0 +1,87 @@
+<section>
+
+    <div class="sidebar">
+        <div>
+            <h2>trident</h2>
+        </div>
+
+        <div class="ui container links">
+
+            <!-- <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/dash">DashBoard</a></button>
+            <button><i class="fa fa-list-ul" aria-hidden="true"></i><a routerLink="/table">View Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/addForm">Add Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button> -->
+
+            <button class="ui secondary button">
+                <a routerLink="/userdash">DashBoard</a>
+            </button>
+
+            <button class="ui secondary button">
+                <a routerLink="/restable">View All Reservation</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/newResform">Make Reservation</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/usertable">View All Guest</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/userform">Add Guest</a>
+            </button>
+            <button class="ui button">
+                <a routerLink="/">LOGOUT</a>
+            </button>
+
+        </div>
+
+    </div>
+
+    <section class="contant">
+
+        <div class="add-header">
+            <h1>Hello There</h1>
+            <p>This page is List of Reservation</p>
+        </div>
+
+        <div class="ui container table-my">
+            <table class="ui selectable inverted table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Children</th>
+                        <th>Adult</th>
+                        <th>Check IN</th>
+                        <th>No. of Night</th>
+                        <th>Bill</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of collection">
+                        <td>{{item.name}}</td>
+                        <td>{{item.noChild}}</td>
+                        <td>{{item.noAdult}}</td>
+                        <td>{{item.checkIn}}</td>
+                        <td>{{item.noNight}}</td>
+                        <td><button class="ui inverted orange button"><a
+                            routerLink="/billit">Bill</a></button></td>
+                        <td>
+                            <div class="ui buttons">
+                                <button (click)="deleteRes(item.id)" class="ui negative button active">DELETE</button>
+                                <div class="or"></div>
+                                <button class="ui positive button"><a
+                                        routerLink="/resUpdate/{{item.id}}">EDIT</a></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</section>
+
+
+<!--  -->

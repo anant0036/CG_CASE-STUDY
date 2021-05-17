@@ -1,0 +1,60 @@
+<header>
+<div class="head">
+    <h2 class="ui container">Update Employee Detail</h2>
+    <p class="ui container">Edit the detail present in the fields</p>
+    
+</div>
+
+
+<section class="ui container">
+
+    <div class="my-style">
+        <form [formGroup]="updateEmp" (ngSubmit)="putEmp()" class="ui form">
+            <div class="field disabled field">
+                <label>Name</label>
+                <input type="text" name="first-name" placeholder="Name" formControlName="name">
+            </div>
+            <div class="field">
+                <label>Email address</label>
+                <input type="text" name="last-name" placeholder="name@example.com" formControlName="email">
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input type="text" name="first-name" placeholder="Address" formControlName="address">
+            </div>
+            <div class="field">
+                <label>Salary</label>
+                <input type="text" name="first-name" placeholder="Salary per annum" formControlName="salary">
+            </div>
+            <div class="field">
+                <label>Age</label>
+                <input type="number" name="first-name" placeholder="Age in Number" formControlName="age">
+            </div>
+            <div class="ui large buttons">
+                <button class="ui positive button">Update</button>
+                <div class="or"></div>
+                <button class="ui button"><a routerLink="/table">Go to List</a></button>
+                
+            </div>
+        </form>
+
+        <!-- <div *ngIf="alertDanger" class="ui negative message container">
+            <i (click)="closeAlert()" class="close icon"></i>
+            <div class="header">
+                We're sorry we can't apply that discount
+            </div>
+        </div>-->
+
+        <div *ngIf="alertSuccess" class="ui positive message container">
+            <i (click)="closeAlert()" class="close icon"></i>
+            <div class="header">
+                Your Entry are now saved successfully !!!
+            </div>
+        </div>
+
+        <br>
+
+
+    </div>
+</section>
+</header>

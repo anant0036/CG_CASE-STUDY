@@ -1,0 +1,73 @@
+<header>
+    <div class="head">
+        <h2 class="ui container">Update Guest Detail</h2>
+        <p class="ui container">Edit the detail present in the fields</p>
+        
+    </div>
+    
+    
+    <section class="ui container">
+    
+        <!-- [formGroup]="updateGuest" (ngSubmit)="putGuest()" -->
+        <div class="my-style">
+            <form [formGroup]="updateRes" (ngSubmit)="putRes()" class="ui form">
+                <div class="disabled field">
+                    <label>Guest Name</label>
+                    <input required type="text" name="first-name" placeholder="Name" formControlName="name">
+                </div>
+                <div class="field">
+                    <label>Number of Children</label>
+                    <input type="number" name="last-name" placeholder="Number of Children" formControlName="noChild">
+                </div>
+
+                <div class="field">
+                    <label>Number of Adult</label>
+                    <input type="number" name="first-name" placeholder="Number of Adult" formControlName="noAdult">
+                </div>
+
+                <div class="field">
+                    <label>Number of Night</label>
+                    <input type="number" name="first-name" placeholder="Number of Night" formControlName="noNight">
+                </div>
+                <div class="field">
+                    <label>Check In</label>
+                    <input type="date" name="first-name" placeholder="Check In date" formControlName="checkIn">
+                </div>
+                <div class="field">
+                    <label>Check Out</label>
+                    <input type="date" name="first-name" placeholder="Check Out date" formControlName="CheckOut">
+                </div>
+
+                
+
+                <div class="ui large buttons">
+                    <button class="ui positive button">Update</button>
+                    <div class="or"></div>
+                    <button class="ui button"><a routerLink="/restable">Cancle</a></button>
+                    
+                </div>
+            </form>
+    
+            <!-- <div *ngIf="alertDanger" class="ui negative message container">
+                <i (click)="closeAlert()" class="close icon"></i>
+                <div class="header">
+                    We're sorry we can't apply that discount
+                </div>
+            </div>-->
+    
+            <div *ngIf="alertSuccess" class="ui positive message container">
+                <i (click)="closeAlert()" class="close icon"></i>
+                <div class="header">
+                    Your Entry are now saved successfully !!!
+                </div>
+            </div>
+    
+            <br>
+    
+            <button class="ui container huge secondary button">
+                Click ME!
+            </button>
+    
+        </div>
+    </section>
+    </header>

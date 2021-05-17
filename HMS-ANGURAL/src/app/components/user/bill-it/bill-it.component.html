@@ -1,0 +1,103 @@
+<div class="ui container my">
+    <form [formGroup]="bill" (ngSubmit)="calBill()" class="ui form">
+        <div class="three fields">
+            <div class="field">
+                <label>Number of Days</label>
+                <input type="number" placeholder="Number of Days" formControlName="noNight">
+            </div>
+            <div class="field">
+                <label>Price per Night</label>
+                <input type="number" placeholder="Price per Night" formControlName="price">
+            </div>
+            <div class="field">
+                <label>Any other Charges</label>
+                <input type="number" placeholder="Cost" formControlName="exprice">
+            </div>
+        </div>
+        <button class="ui button" type="submit">Genrate Bill</button>
+    </form>
+</div>
+
+<br>
+<!-- <p>{{this.payable}}</p> -->
+
+<div class="ui two column centered grid">
+    <div class="ui cards">
+        <div class="card">
+            <div class="content">
+                <div class="header">
+                    Bill Summary
+                </div>
+                <div class="description">
+                    <table class="ui very basic collapsing celled table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Cost(₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4 class="ui image header">
+                                        <div class="content">
+                                            No.of Night
+                                        </div>
+                                    </h4>
+                                </td>
+                                <td>
+                                    {{b}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="ui image header">
+                                        <div class="content">
+                                            Per Night Price
+                        
+                                        </div>
+                                    </h4>
+                                </td>
+                                <td>
+                                    {{c}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="ui image header">
+                                        <div class="content">
+                                            Tax(18%)
+                                            
+                                        </div>
+                                    </h4>
+                                </td>
+                                <td>
+                                    {{tax}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 class="ui image header">
+                                        <div class="content">
+                                            TOTAL PAYABLE AMOUNT
+                                    
+                                        </div>
+                                    </h4>
+                                </td>
+                                <td>
+                                    {{payable}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="ui two buttons">
+                    <div class="ui basic green button">CASH</div>
+                    <div class="ui basic red button"><a routerLink="/restable">GO BACK</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

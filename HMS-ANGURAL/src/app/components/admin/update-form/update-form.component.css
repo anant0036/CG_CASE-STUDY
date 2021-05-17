@@ -1,0 +1,43 @@
+header
+{
+    background-color: rgb(247,250,252);
+    height: 100vh;
+}
+section
+{
+    padding: 15px;
+    
+    /* box-shadow: 0 0 2rem 0 rgba(136,152,170,.15); */
+}
+
+h2
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 38px;
+    padding-top: 50px;
+}
+
+.head
+{
+    background: linear-gradient(87deg,#f5365c 0,#f56036 100%);
+    /* padding: 0px;
+    margin: 0px; */
+    color: white;
+    height: 24vh;
+
+}
+
+.my-style
+{
+    /* border: 1px solid red; */
+    padding: 30px;
+    margin-top: -100px;
+    background-color: rgb(247,250,252);
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
+    border-radius: 10px;
+}
+
+a{
+    color: black;
+}

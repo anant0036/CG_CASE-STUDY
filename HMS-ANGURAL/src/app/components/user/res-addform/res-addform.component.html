@@ -1,0 +1,116 @@
+<section>
+
+    <div class="sidebar">
+        <div>
+            <h2>trident</h2>
+        </div>
+
+        <div class="ui container links">
+
+            <!-- <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/dash">DashBoard</a></button>
+            <button><i class="fa fa-list-ul" aria-hidden="true"></i><a routerLink="/table">View Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/addForm">Add Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button> -->
+
+            <button class="ui secondary button">
+                <a routerLink="/userdash">DashBoard</a>
+            </button>
+
+            <button class="ui secondary button">
+                <a routerLink="/restable">View All Reservation</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/newResform">Make Reservation</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/usertable">View All Guest</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/userform">Add Guest</a>
+            </button>
+            <button class="ui button">
+                <a routerLink="/">LOGOUT</a>
+            </button>
+
+        </div>
+
+    </div>
+
+    <section class="contant">
+
+        <div class="add-header">
+            <h1>Hello There</h1>
+            <p>This page is for doing new Reservation</p>
+        </div>
+
+
+
+        <div class="ui container my-form">
+            <div>
+
+                <p>Make new Reservation</p>
+
+            </div>
+
+            <div>
+
+
+                <form [formGroup]="addReser" (ngSubmit)="collectRes()" class="ui form">
+                    <div class="field">
+                        <label>Guest Name</label>
+                        <input required type="text" name="first-name" placeholder="Name" formControlName="name">
+                    </div>
+                    <div class="field">
+                        <label>Number of Children</label>
+                        <input type="number" name="last-name" placeholder="Number of Children eg: 2 , 3" formControlName="noChild">
+                    </div>
+
+                    <div class="field">
+                        <label>Number of Adult</label>
+                        <input type="number" name="first-name" placeholder="Number of Adult eg: 2, 3" formControlName="noAdult">
+                    </div>
+
+                    <div class="field">
+                        <label>Number of night</label>
+                        <input type="number" name="first-name" placeholder="Number of Night eg: 2, 3" formControlName="noNight">
+                    </div>
+                    <div class="field">
+                        <label>Check In</label>
+                        <input type="date" name="first-name" placeholder="Date Here" formControlName="checkIn">
+                    </div>
+                    <div class="field">
+                        <label>Check Out</label>
+                        <input type="date" name="first-name" placeholder="Date Here" formControlName="CheckOut">
+                    </div>
+                    
+
+                    
+
+                    <button class="huge positive ui button" type="submit">Submit</button>
+                </form>
+
+                <div *ngIf="alertDanger" class="ui negative message container">
+                    <i (click)="closeAlert()" class="close icon"></i>
+                    <div class="header">
+                        Error in the Opration try again !! 
+                    </div>
+                </div>
+
+                <div *ngIf="alertSuccess" class="ui positive message container">
+                    <i (click)="closeAlert()" class="close icon"></i>
+                    <div class="header">
+                        Successfully data is saved !! 
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!--  (ngSubmit)="collectGuest()"  -->

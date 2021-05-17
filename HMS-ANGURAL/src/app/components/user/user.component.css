@@ -1,0 +1,67 @@
+section
+{
+    display: flex;
+
+}
+
+.contant
+{
+    /* border: 2px solid red; */
+    background-color: rgb(246,247,252);
+    height: 100vh;
+    width: 80vw;
+}
+
+.sidebar
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 20vw;
+    max-width: 20vw;
+    /* border: 5px solid green; */
+}
+
+h2
+{
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(220,3,48);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.links
+{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+    height: 40vh;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+button
+{
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(25,25,25);
+    height: 50px;
+    text-align: start;
+    margin-left: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+i
+{
+    margin-right: 18px;
+    font-size: 20px;
+    color: rgb(68, 150, 226);
+    
+}

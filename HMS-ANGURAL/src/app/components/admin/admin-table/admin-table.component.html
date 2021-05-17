@@ -1,0 +1,87 @@
+<section>
+
+  <div class="sidebar">
+    <div>
+      <h2>trident</h2>
+    </div>
+
+    <div class="ui container links">
+
+      <!-- <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/dash">DashBoard</a></button>
+        <button><i class="fa fa-list-ul" aria-hidden="true"></i><a routerLink="/table">View Employee</a></button>
+        <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/addForm">Add Employee</a></button>
+        <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button>
+        <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button> -->
+
+      <button class="ui secondary button">
+        <a routerLink="/dash">DashBoard</a>
+      </button>
+      <button class="ui secondary button">
+        <a routerLink="/table">View Employee</a>
+      </button>
+      <button class="ui secondary button">
+        <a routerLink="/addForm">Add Employee</a>
+      </button>
+      <button class="ui secondary button">
+        <a routerLink="/restable">View Reservation</a>
+      </button>
+      <button class="ui secondary button">
+        <a routerLink="/usertable">View Guest</a>
+      </button>
+      <button class="ui button">
+        <a routerLink="/">LOGOUT</a>
+      </button>
+
+    </div>
+
+  </div>
+
+  <section class="contant">
+
+    <div class="add-header">
+      <h1>Hello There</h1>
+      <p>This page is for Viewing List Employee</p>
+    </div>
+
+    <div class="ui container table-my">
+      <table class="ui selectable inverted table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Age</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of collection">
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.salary}}</td>
+            <td>{{item.age}}</td>
+            <td>
+              <div class="ui buttons">
+                <button (click)="deleteEmp(item.id)" class="ui negative button active">DELETE</button>
+                <div class="or"></div>
+                <button class="ui positive button"><a routerLink="/updateForm/{{item.id}}">EDIT</a></button>
+              </div>
+            </td>
+          </tr>
+          <!-- <tr>
+                <td>Jamie</td>
+                <td>Approved</td>
+                <td class="right aligned">Requires call</td>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Denied</td>
+                <td class="right aligned">None</td>
+              </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</section>

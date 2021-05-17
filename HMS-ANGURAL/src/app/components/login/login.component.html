@@ -1,0 +1,40 @@
+<section>
+    <header>
+        <div>
+            <p class="brand-name">Trident Hotel</p>
+        </div>
+        <div>
+            <ul class="brand-link">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="box-wrapper">
+        
+        <h4>Login with credentials</h4>
+    
+        <form (ngSubmit) ="onSubmit()">
+            <label>NAME</label>
+            <br>
+            <input required [(ngModel)]="credentials.username" type="text" placeholder="Name" name="username">
+            <br>
+            <label>PASSWORD</label>
+            <br>
+            <input required [(ngModel)]="credentials.password" type="password" placeholder="Password" name="password">
+            <br>
+            <button class="login-btn">LOGIN</button>
+        </form>
+    
+    </div>
+
+    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show container" role="alert">
+        <strong><center>{{message}}</center></strong>
+        <button (click) = "closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    </section>

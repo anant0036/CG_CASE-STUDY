@@ -1,0 +1,73 @@
+<section>
+
+    <div class="sidebar">
+        <div>
+            <h2>trident</h2>
+        </div>
+
+        <div class="ui container links">
+
+            <!-- <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/dash">DashBoard</a></button>
+            <button><i class="fa fa-list-ul" aria-hidden="true"></i><a routerLink="/table">View Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i><a routerLink="/addForm">Add Employee</a></button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button>
+            <button><i class="fa fa-user-plus" aria-hidden="true"></i> Demo</button> -->
+
+            <button class="ui secondary button">
+                <a routerLink="/dash">DashBoard</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/table">View Employee</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/addForm">Add Employee</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/restable">View Reservation</a>
+            </button>
+            <button class="ui secondary button">
+                <a routerLink="/usertable">View Guest</a>
+            </button>
+            <button class="ui button">
+                <a routerLink="/">LOGOUT</a>
+            </button>
+
+        </div>
+
+    </div>
+
+    <section class="contant">
+        <div class="card-wrapper">
+            <div class="wide">
+                <h4>Employee</h4>
+                <i class="users icon"></i>
+                <p>Employee Management Service</p>
+                <div class="ui buttons">
+                    <button class="ui blue basic button"><a routerLink="/table">View</a></button>
+                    <button class="ui green basic button"><a routerLink="/addForm">Add</a></button>
+                </div>
+            </div>
+            <div class="wide">
+                <h4>Reservation</h4>
+                <i class="paper plane icon"></i>
+                <p>Reservation Management Service</p>
+                <div class="ui buttons">
+                    <button class="ui blue basic button"><a routerLink="/restable">View</a></button>
+                    <button class="ui green basic button"><a routerLink="/dash">Add</a></button>
+                </div>
+            </div>
+            <div class="wide">
+                <h4>Guest</h4>
+                <i class="heart outline icon"></i>
+                <p>Guest Management Service</p>
+                <div class="ui buttons">
+                    <button class="ui blue basic button"><a routerLink="/usertable">View</a></button>
+                    <button class="ui green basic button"><a routerLink="/dash">Add</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<router-outlet></router-outlet>
