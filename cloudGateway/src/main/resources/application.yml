@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:      - id: employee-service
+        uri: lb://Employee-Service        predicates:         - Path=/api/emp/**
+      - id: guest-service
+        uri: lb://Guest-Service
+        predicates:
+         - Path=/api/guest/**
+      - id: reservation-service
+        uri: lb://Reservation-Service
+        predicates:
+         - Path=/api/res/**
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+server:
+  port: 9190

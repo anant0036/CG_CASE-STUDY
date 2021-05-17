@@ -1,0 +1,16 @@
+server:
+  port: 9193
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://bhushan:Bhushan@cluster0.mpn5p.mongodb.net/reservation?retryWrites=true&w=majority
+  application:
+    name: Reservation-Service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
